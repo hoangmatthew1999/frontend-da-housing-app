@@ -1,22 +1,23 @@
 import React from 'react';
-import loftlyTheme from './Theme';
-import { Grommet, Box, Text, TextInput, Select, TextArea, FormField, Button } from 'grommet';
+import loftryTheme from './Theme';
+import { Box, TextInput, Button, Text, Grommet, FormField, Select, TextArea } from 'grommet';
 
-const Signup: React.FC = () => {
+const Register = () => {
+
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
     const [gender, setGender] = React.useState('other');
     const [preferences, setPreferences] = React.useState('');
-    const [password, setPassword] = React.useState('');
     const [school, setSchool] = React.useState('');
-    const [email, setEmail] = React.useState('');
 
-    const handleSubmission = () => {
-        alert(`${gender} ${password} ${school} ${email} ${preferences}`)
+    const handleSubmissionSignUp = () => {
+        alert(`${gender} ${password} ${school} ${email} ${preferences.split(",")}`)
     }
 
     return (
-        <Grommet full theme={loftlyTheme}>
+        <Grommet theme={loftryTheme}>
             <Box fill align="center" justify="center">
-                <Box width="medium">
+                <Box width="xlarge" background="white" round="medium" border={{ color: 'white', size: 'xlarge' }}>
                     <Text size="large" >Sign Up</Text>
                     <br />
                     <Box>
@@ -55,12 +56,13 @@ const Signup: React.FC = () => {
                     </Box>
                     <br />
                     <Box>
-                        <Button onClick={handleSubmission} style={{ color: "#ffffff" }} primary label="submit" />
+                        <Button onClick={handleSubmissionSignUp} style={{ color: "#ffffff" }} primary label="submit" />
                     </Box>
                 </Box>
             </Box>
         </Grommet>
-    );
+    )
 }
 
-export default Signup;
+
+export default Register;
