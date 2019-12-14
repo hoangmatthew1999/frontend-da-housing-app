@@ -26,7 +26,7 @@ const Front: React.FC = () => {
                         animation = {["fadeIn","slideLeft"]}
                         gap="large"
                         direction="row"
-                        margin={{ left: "1450px" }}
+                        margin={{ left: "45%" }}
                     >
                         <Anchor href="#" size="large" color="black" label="About" />
                         <Anchor href="#" size="large" color="black" label="FAQ" />
@@ -36,7 +36,7 @@ const Front: React.FC = () => {
                 <Box
                     direction="row">
                     <Box
-                        margin={{ left: '162px', top: '89px' }}
+                        margin={{ left: '162px', top: '1%' }}
                         background="white"
                         alignSelf="start"
                         width="medium"
@@ -79,7 +79,7 @@ const Front: React.FC = () => {
                             </Layer>
                         )}
                     </Box>
-                    <Box align="start" margin = {{top:"220px", left:"180px"}} animation={["fadeIn","slideUp"]} direction="column" >
+                    <Box align="start" margin = {{top:"40%", left:"25%"}} animation={["fadeIn","slideUp"]} direction="column" >
                         <Heading color="light-1" level="1" textAlign="start" >Introducing Loftly Housing. <br /> Welcome to AI Powered Co-living.</Heading>
                         <Box direction="row" align="start" gap="large">
                             <Button style={{ color: "#ffffff" }} margin="small" primary label="Living with Loftly" />
