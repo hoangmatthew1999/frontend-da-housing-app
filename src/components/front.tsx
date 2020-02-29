@@ -1,7 +1,7 @@
 import React from 'react';
 import loftryTheme from './Theme';
 import { Box, Heading, TextInput, Button, Text, Grommet, Anchor, Tabs, Tab, Layer } from 'grommet';
-import Register from './register';
+import Register from './Register';
 
 const Front: React.FC = () => {
     const [email, setEmail] = React.useState('');

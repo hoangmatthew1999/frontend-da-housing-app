@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import theme from "../Theme";
-import { Grommet, Box } from "grommet";
+import { Grommet, Box,Button} from "grommet";
 import ReactMapGL from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 //import { config } from '../../config';
@@ -28,13 +28,16 @@ const MapView: React.FC<MapKitPropsInterface> = (props) => {
     longitude,
     zoom
   });
-  componentDidMount(){
+
+  async function handleClick(event: React.MouseEvent<HTMLButtonElement>){
     let response = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDdngkkFMKItXik_aZKOGo9oZNEd60qC24');
     let data = await response.json;
     console.log(data);
-  };
+  }
   return (
       <Grommet theme={theme}>
+        <Button label="Edit"onClick={handleClick}/>
+/>
       <Box height={`${height}px`} width={`${width}px`}  >
         {/* <ReactMapGL {...viewport} mapboxApiAccessToken={config.MAPBOX_TOKEN} onViewportChange={setViewport} /> */}
       </Box>
