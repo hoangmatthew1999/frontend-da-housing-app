@@ -28,11 +28,11 @@ const MapView: React.FC<MapKitPropsInterface> = (props) => {
     longitude,
     zoom
   });
-  // componentDidMount(){
-  //   let response = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDdngkkFMKItXik_aZKOGo9oZNEd60qC24');
-  //   let data = await response.json;
-  //   console.log(data);
-  // };
+  componentDidMount(){
+    let response = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDdngkkFMKItXik_aZKOGo9oZNEd60qC24');
+    let data = await response.json;
+    console.log(data);
+  };
   return (
       <Grommet theme={theme}>
       <Box height={`${height}px`} width={`${width}px`}  >

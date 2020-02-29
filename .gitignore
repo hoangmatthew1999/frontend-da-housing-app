@@ -2,6 +2,7 @@
 
 # Enviroment Variables 
 /src/config.ts
+.env
 
 # dependencies
 /node_modules
